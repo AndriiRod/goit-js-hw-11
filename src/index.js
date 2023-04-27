@@ -1,6 +1,3 @@
-const pug = require('pug');
-const imageCardTpl = pug.compileFile('./template/imageCard.pug');
-
 import { PixabayAPI } from './js/requestApi';
 
 const formRef = document.getElementById('search-form');
