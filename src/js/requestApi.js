@@ -20,3 +20,5 @@ class PixabayAPI {
 }
 
 export { PixabayAPI };
+
+`https://pixabay.com/api/?key=35805038-e4e8ca296dd3f5d333d9e11d2&q="cat"&image_type=photo&safesearch=trues&orientation=horizontal&per_page=40&page = 1`;

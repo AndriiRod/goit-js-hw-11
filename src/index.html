@@ -8,15 +8,25 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <form class="search-form" id="search-form">
-      <input
-        type="text"
-        name="searchQuery"
-        autocomplete="off"
-        placeholder="Search images..."
-      />
-      <button type="submit">Search</button>
-    </form>
-    <div class="gallery"></div>
+    <header class="header">
+      <form class="search-form" id="search-form">
+        <input
+          class="input"
+          type="text"
+          name="searchQuery"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+        <button class="submit-btn" type="submit">
+          <svg width="13px" height="13px">
+            <use
+              class="submit__icon"
+              href="./images/icons.svg#icon-search"
+            ></use>
+          </svg>
+        </button>
+      </form>
+    </header>
+    <main class="main"><div class="gallery"></div></main>
   </body>
 </html>
