@@ -12,6 +12,9 @@ class PixabayAPI {
     this.page = 1;
   }
   async getRequest() {
+    if (this.page * this.numberResults > 480) {
+      this.numberResults = 20;
+    }
     const response = await axios.get(
       `${this.BASE_API}?key=${this.API_KEY}&q=${this.searchQuery}&image_type=${this.imageType}&safesearch=${this.isSafeSearch}&orientation=${this.orientationImage}&per_page=${this.numberResults}&page=${this.page}`
     );
