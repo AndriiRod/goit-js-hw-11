@@ -13,12 +13,14 @@ class PixabayAPI {
   }
   async getRequest() {
     const response = await axios.get(
-      `${this.BASE_API}?key=${this.API_KEY}&q=${this.searchQuery}&image_type=${this.imageType}&safesearch=${this.isSafeSearch}&orientation=${this.orientationImage}&per_page=${this.numberResults}&page = ${this.page}`
+      `${this.BASE_API}?key=${this.API_KEY}&q=${this.searchQuery}&image_type=${this.imageType}&safesearch=${this.isSafeSearch}&orientation=${this.orientationImage}&per_page=${this.numberResults}&page=${this.page}`
     );
-    return response.data.hits;
+    return response.data;
+  }
+
+  increment() {
+    this.page += 1;
   }
 }
 
 export { PixabayAPI };
-
-`https://pixabay.com/api/?key=35805038-e4e8ca296dd3f5d333d9e11d2&q="cat"&image_type=photo&safesearch=trues&orientation=horizontal&per_page=40&page = 1`;
