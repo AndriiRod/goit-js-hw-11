@@ -49,6 +49,8 @@ function checkData(data) {
 function renderMarkup(data) {
   const markup = createMarkUp(data.hits);
   ref.galleryBox.insertAdjacentHTML('beforeend', markup);
+  ightbox.refresh();
+  scroll();
   console.log(ref.galleryBox.children.length);
   if (data.totalHits <= ref.galleryBox.children.length) {
     Notify.info("We're sorry, but you've reached the end of search results.");
@@ -56,8 +58,6 @@ function renderMarkup(data) {
     return;
   }
   loadMoreShow();
-  scroll();
-  ightbox.refresh();
 }
 
 function loadMore() {
